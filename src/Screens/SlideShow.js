@@ -5,7 +5,7 @@ import {UNSPLASH_API_KEY} from 'dotenv'
 
 
 export default function SlideShow() {
-  console.log(UNSPLASH_API_KEY)
+
   const [images,setImages] = useState([])
   const [quotes,setQuotes] = useState([])
 
