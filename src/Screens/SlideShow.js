@@ -37,7 +37,6 @@ export default function SlideShow() {
 
     },[])
 
-  console.log(images,quotes)
   return (
     <View style={{flex:1}}>
       { images.length > 0 && quotes.length > 0 ? 

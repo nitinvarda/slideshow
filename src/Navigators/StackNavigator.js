@@ -1,6 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../Screens/HomeScreen';
 import SlideShow from '../Screens/SlideShow';
+import CustomPhotos from '../Screens/CustomPhotos';
 
 const Stack = createStackNavigator();
 
@@ -9,6 +10,7 @@ export default function MyStack(props) {
     <Stack.Navigator screenOptions={{headerShown:false}}>
       <Stack.Screen name="Home" component={HomeScreen}  />
       <Stack.Screen name="SlideShow" component={SlideShow}  />
+      <Stack.Screen name="CustomPhotos" component={CustomPhotos} />
     </Stack.Navigator>
   );
 }

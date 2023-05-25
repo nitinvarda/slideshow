@@ -7,6 +7,7 @@ export default function HomeScreen(props) {
   return (
     <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
       <Button onPress={()=>navigation.navigate('SlideShow')} title='Start slide show' />
+      <Button onPress={()=>navigation.navigate('CustomPhotos')} title='Add Custom photos' />
     </View>
   )
 }
