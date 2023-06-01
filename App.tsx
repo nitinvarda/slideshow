@@ -29,6 +29,7 @@ function App(): JSX.Element {
 
   return (
     <NavigationContainer >
+      
       <MyStack />
     </NavigationContainer>
   );
