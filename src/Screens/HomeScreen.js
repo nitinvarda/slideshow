@@ -10,7 +10,7 @@ export default function HomeScreen(props) {
   const navigation = useNavigation();
   return (
     <View style={{flex:1}}>
-      <TouchableOpacity onPress={()=>logout()} style={{position:'absolute',right:10,top:10,width:40,height:40,zIndex:1}}>
+      <TouchableOpacity disabled={!loggedIn} onPress={()=>logout()} style={{position:'absolute',right:10,top:10,width:40,height:40,zIndex:1}}>
         <FontAwesome5 name='user-circle' size={40} color={Colors.gray} />
       </TouchableOpacity>
       <View style={{flex:1,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
