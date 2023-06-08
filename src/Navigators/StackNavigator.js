@@ -6,12 +6,20 @@ import { useEffect, useState } from 'react';
 import LoginScreen from '../Screens/LoginScreen';
 import AppContext from '../Context/AppContext';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import ProfileScreen from '../Screens/ProfileScreen';
+import UserPhotosList from '../Screens/UserPhotosList';
+import UserQuotesList from '../Screens/UserQuotesList';
+import AddUserPhotos from '../Screens/AddUserPhotos';
+import AddUserQuote from '../Screens/AddUserQuote';
 
 const Stack = createStackNavigator();
 
 export default function MyStack(props) {
-  const [loggedIn,setLoggedIn] = useState(false)
-  const [user,setUser] = useState({});
+  const [loggedIn,setLoggedIn] = useState(true)
+  const [user,setUser] = useState({
+    uid:'DDyCMjt8QxMIh0mAZ85gIZpikhR2',
+    email:'nvarda@gmail.com'
+  });
 
   const changeAuthentication = (data) =>{
     setLoggedIn(true)
@@ -55,8 +63,14 @@ export default function MyStack(props) {
             <Stack.Screen name="Home" component={HomeScreen}  />
             <Stack.Screen name="SlideShow" component={SlideShow}  />
         {loggedIn ? 
-        
-            <Stack.Screen name="CustomPhotos" component={CustomPhotos} />
+            <>
+                <Stack.Screen name="AddUserQuote" component={AddUserQuote} />
+                <Stack.Screen name="AddUserPhotos" component={AddUserPhotos} />
+                <Stack.Screen name="UserQuotesList" component={UserQuotesList} />
+                <Stack.Screen name="UserPhotosList" component={UserPhotosList} />
+                <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+                <Stack.Screen name="CustomPhotos" component={CustomPhotos} />
+            </>
           :
             <Stack.Screen name="loginScreen" component={LoginScreen} />
         }

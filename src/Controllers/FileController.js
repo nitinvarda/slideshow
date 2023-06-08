@@ -16,7 +16,8 @@ const File = {
 
         const imageRefs = await storage().ref().child(userId).listAll();
         const urls = await Promise.all(imageRefs.items.map((ref) => ref.getDownloadURL()));
-        console.log(urls)
+  
+        return urls;
         // return reference.list({ pageToken }).then(result => {
         //   // Loop over each item
         //   result.items.forEach(ref => {

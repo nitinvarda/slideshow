@@ -45,6 +45,11 @@ export default function LoginScreen(props) {
 
             FireAuth.login({email,password}).then(result=>{
                 changeAuthentication(result);
+            }).catch(error=>{
+                setError(error.message);
+                setTimeout(()=>{
+                    setError('');
+                },3000)
             })
         }
         else{
@@ -63,10 +68,11 @@ export default function LoginScreen(props) {
                 <TextInput  placeholder='password' placeholderTextColor={Colors.lightGray} secureTextEntry value={password} onChangeText={(text)=>setPassword(text)} style={styles.textField} />
                 {login ? (
                     <>
-                    <View style={{flexDirection:'row',padding:0,margin:0}}>
+                    {/* {error && <Text>{error}</Text>} */}
+                    {/* <View style={{flexDirection:'row',padding:0,margin:0}}>
                         <Text style={{padding:0,margin:0,color:Colors.textColor}}>forgot password ? </Text>
                         <TouchableOpacity onPress={()=>setLogin(true)}><Text style={{margin:0,padding:0,color:Colors.primary}}>reset here</Text></TouchableOpacity>
-                    </View>
+                    </View> */}
                     <View style={{flexDirection:'row'}}>
                         <Text style={{color:Colors.textColor}}>New here ? </Text>
                         <TouchableOpacity onPress={()=>setLogin(false)}><Text style={{color:Colors.primary}}>Create an account</Text></TouchableOpacity>
@@ -110,11 +116,11 @@ export default function LoginScreen(props) {
         {renderType()}
         <View style={[styles.flex,{flexDirection:'column',justifyContent:'space-evenly',alignItems:'center'}]} > 
                      
-            <Text style={{color:Colors.gray}}>Or login with</Text>
+            {/* <Text style={{color:Colors.gray}}>Or login with</Text>
             <TouchableOpacity style={{borderWidth:1,padding:10,borderRadius:50,width:50,height:50,flexDirection:'row',justifyContent:'center',alignItems:'center',borderColor:Colors.gray}}>
 
             <FontAwesome name="google" size={30} color="blue" />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
         </View>
         
     </KeyboardAvoidingView>
