@@ -10,6 +10,14 @@ const Firestore = {
         } catch (error) {
             throw new Error(error);
         }
+    },
+    'getQuotes':async (uid)=>{
+        try {
+            const result = await firestore().collection('quotes').where('userId','==',uid).get();
+            return result.docs.map(quote => ({ ...quote.data(), id: quote.id }));
+        } catch (error) {
+            throw new Error(error)
+        }
     }
 }
 
