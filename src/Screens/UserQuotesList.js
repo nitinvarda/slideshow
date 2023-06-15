@@ -45,10 +45,10 @@ export default function UserQuotesList(props) {
       renderItem={({item})=>{
         return(
           <TouchableOpacity onPress={()=>setOpenModal(true)} activeOpacity={0.2} style={{padding:15,borderBottomWidth:1}}>
-            <Text style={{fontWeight:600}}>{item.quote}</Text>
+            <Text style={{fontWeight:600,color:Colors.gray}}>{item.quote}</Text>
       
 
-            <Text style={{textAlign:'right',padding:5,fontWeight:'bold'}}>--{item.author}</Text>
+            <Text style={{textAlign:'right',padding:5,fontWeight:'bold',color:Colors.gray}}>--{item.author}</Text>
            
           </TouchableOpacity>
         )

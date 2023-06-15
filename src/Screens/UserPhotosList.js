@@ -27,7 +27,7 @@ export default function UserPhotosList(props) {
           setPhotos(result)
         }).catch(err=>console.log(err))
       }
-      console.log(photos)
+    
   return (
    <>
 
@@ -44,7 +44,7 @@ export default function UserPhotosList(props) {
         
         // style={{flex:1,flexDirection:'row',flexWrap:'wrap'}}
         renderItem={({item})=>{
-            console.log(item)
+            
             return(
                 <View style={{ flex: 1,margin:1  }}>
                 <Image source={{uri:item}} style={{height:300,}} />
@@ -52,7 +52,7 @@ export default function UserPhotosList(props) {
             )
         }}
         />
-        <FloatingButton text="Start Slide Show" onPress={()=>{}} />
+        <FloatingButton text="Start Slide Show" onPress={()=>navigation.navigate('CustomSlideShow',{photos})} />
         
     </>
   )

@@ -11,6 +11,7 @@ import UserPhotosList from '../Screens/UserPhotosList';
 import UserQuotesList from '../Screens/UserQuotesList';
 import AddUserPhotos from '../Screens/AddUserPhotos';
 import AddUserQuote from '../Screens/AddUserQuote';
+import CustomSlideShow from '../Screens/CustomSlideShow';
 
 const Stack = createStackNavigator();
 
@@ -70,6 +71,7 @@ export default function MyStack(props) {
                 <Stack.Screen name="UserPhotosList" component={UserPhotosList} />
                 <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
                 <Stack.Screen name="CustomPhotos" component={CustomPhotos} />
+                <Stack.Screen name="CustomSlideShow" component={CustomSlideShow} />
             </>
           :
             <Stack.Screen name="loginScreen" component={LoginScreen} />

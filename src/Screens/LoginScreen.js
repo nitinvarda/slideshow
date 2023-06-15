@@ -63,7 +63,7 @@ export default function LoginScreen(props) {
 
     const renderType =()=>{
         return(
-            <View style={[{flex:2},{flexDirection:'column',justifyContent:'space-evenly'}]}>
+            <View style={[{flex:2},{flexDirection:'column',justifyContent:'space-evenly',backgroundColor:Colors.backgroundColor}]}>
                 <TextInput placeholder='email' placeholderTextColor={Colors.lightGray} value={email} onChangeText={(text)=>setEmail(text)} style={styles.textField} />
                 <TextInput  placeholder='password' placeholderTextColor={Colors.lightGray} secureTextEntry value={password} onChangeText={(text)=>setPassword(text)} style={styles.textField} />
                 {login ? (

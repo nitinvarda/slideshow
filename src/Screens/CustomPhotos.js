@@ -4,6 +4,8 @@ import {launchCamera, launchImageLibrary} from 'react-native-image-picker';
 import File from '../Controllers/FileController';
 import AppContext from '../Context/AppContext';
 import {useNavigation} from '@react-navigation/native'
+import Colors from '../Constansts/ColorPalette';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export default function CustomPhotos(props) {
   const [image,setImage] = useState(image);
@@ -34,14 +36,26 @@ export default function CustomPhotos(props) {
   
  
   return (
-    <View style={{flex:1,flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-      <TouchableOpacity onPress={openPhotos}><Text>Tap to add photos</Text></TouchableOpacity>
+    <View style={{flex:1,flexDirection:'column',justifyContent:'center',backgroundColor:Colors.backgroundColor}}>
+      <TouchableOpacity onPress={openPhotos} style={{margin:10,flex:2,borderWidth:2,borderColor:Colors.gray,borderRadius:5,borderStyle:'dashed',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
+        <MaterialIcons name='add-a-photo' size={30} color={Colors.gray} />
+        <Text style={{color:Colors.gray}}>Tap to add photos</Text>
+      </TouchableOpacity>
       {image && <View>
         <Image source={{uri:`data:image/png;base64,${image.base64}`}} style={{width:300,height:300}} />
       </View>}
-      <Button title='submit' onPress={savePhoto} />
-      <Button title='get List' onPress={()=>navigation.navigate('UserPhotosList',{id:user.uid})} />
-      <Button title="get Quotes" onPress={()=>navigation.navigate("UserQuotesList")} />
+      <View style={{flex:1}}>
+        <Button title='submit' onPress={savePhoto} />
+        
+      </View>
+      <View style={{flex:1}}>
+        <Button title='get List' onPress={()=>navigation.navigate('UserPhotosList',{id:user.uid})} />
+
+      </View>
+      <View style={{flex:1}}>
+
+        <Button title="get Quotes" onPress={()=>navigation.navigate("UserQuotesList")} />
+      </View>
     </View>
   )
 }

@@ -2,6 +2,7 @@ import { View, Text,Image,Dimensions,ScrollView,FlatList,Button } from 'react-na
 import React, { useEffect, useRef, useState } from 'react'
 import Carousel from '../Components/Carousel';
 import {UNSPLASH_API_KEY} from 'dotenv'
+import Colors from '../Constansts/ColorPalette';
 
 
 export default function SlideShow() {
@@ -38,7 +39,7 @@ export default function SlideShow() {
     },[])
 
   return (
-    <View style={{flex:1}}>
+    <View style={{flex:1,backgroundColor:Colors.backgroundColor}}>
       { images.length > 0 && quotes.length > 0 ? 
      <Carousel images={images} quotes={quotes} /> : <Text>Loading..</Text>
     }

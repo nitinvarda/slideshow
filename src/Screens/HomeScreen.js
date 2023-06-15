@@ -9,7 +9,7 @@ export default function HomeScreen(props) {
   const {loggedIn,logout} = useContext(AppContext);
   const navigation = useNavigation();
   return (
-    <View style={{flex:1}}>
+    <View style={{flex:1,backgroundColor:Colors.backgroundColor}}>
       {loggedIn  && 
       <TouchableOpacity disabled={!loggedIn} onPress={()=>navigation.navigate('ProfileScreen')} style={{position:'absolute',right:10,top:10,width:40,height:40,zIndex:1}}>
         <FontAwesome5 name='user-circle' size={40} color={Colors.gray} />

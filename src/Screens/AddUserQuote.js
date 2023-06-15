@@ -2,6 +2,7 @@ import { View, TextInput,Button } from 'react-native'
 import React, { useContext, useState } from 'react'
 import Firestore from '../Controllers/FirestoreController';
 import AppContext from '../Context/AppContext';
+import Colors from '../Constansts/ColorPalette';
 
 export default function AddUserQuote(props) {
   const [quote,setQuote] = useState('');
@@ -18,7 +19,7 @@ export default function AddUserQuote(props) {
     .catch(error=>console.log(error));
   }
   return (
-    <View style={{flex:0.5,margin:10,flexDirection:'column',justifyContent:'space-around'}}>
+    <View style={{flex:0.5,margin:10,flexDirection:'column',justifyContent:'space-around',backgroundColor:Colors.backgroundColor}}>
       <TextInput 
         placeholder='enter a Quote'
         multiline

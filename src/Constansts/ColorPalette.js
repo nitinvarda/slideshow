@@ -1,8 +1,9 @@
 const Colors ={
-    'gray' : '#8c8c8c',
+    'gray' : '#808080',
     'lightGray' :'#999' ,
     'textColor': '#4d4d4d',
-    'primary':'#e62e00'  
+    'primary':'#e62e00' ,
+    'backgroundColor':'#e6e6e6' 
 }
 
 

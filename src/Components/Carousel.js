@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-export default function Carousel({images,quotes}) {
+export default function Carousel({images,quotes,custom}) {
     const flatListRef = useRef();
 
     const slide0Animation1 = useRef(new Animated.Value(-400)).current
@@ -425,7 +425,7 @@ export default function Carousel({images,quotes}) {
    
         return (
         <>
-        <Image source={{uri:item?.urls?.full}} style={{width:windowWidth,height:windowHeight}} />
+        <Image source={{uri: custom ? item : item?.urls?.full}} style={{width:windowWidth,height:windowHeight}} />
         {showQuotation(index)}
        
         </>
