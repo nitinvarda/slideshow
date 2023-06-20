@@ -4,21 +4,14 @@ import File from '../Controllers/FileController'
 import { useNavigation, useRoute } from '@react-navigation/native';
 import PageHeader from '../Components/PageHeader';
 import FloatingButton from '../Components/FloatingButton';
+import Testing from '../TestingData/Testing';
 
 export default function UserPhotosList(props) {
     const route = useRoute()
     const navigation = useNavigation()
-    const [photos,setPhotos] = useState([
-        'https://firebasestorage.googleapis.com/v0/b/slider-3a299.appspot.com/o/DDyCMjt8QxMIh0mAZ85gIZpikhR2%2Frn_image_picker_lib_temp_bb8a2fbf-a8fa-4356-a4a8-834e1b1f6e11.jpg?alt=media&token=4c141a49-b583-4a13-9bf0-f01a095c2a5e',
-        'https://firebasestorage.googleapis.com/v0/b/slider-3a299.appspot.com/o/DDyCMjt8QxMIh0mAZ85gIZpikhR2%2Frn_image_picker_lib_temp_bb8a2fbf-a8fa-4356-a4a8-834e1b1f6e11.jpg?alt=media&token=4c141a49-b583-4a13-9bf0-f01a095c2a5e',
-        'https://firebasestorage.googleapis.com/v0/b/slider-3a299.appspot.com/o/DDyCMjt8QxMIh0mAZ85gIZpikhR2%2Frn_image_picker_lib_temp_bb8a2fbf-a8fa-4356-a4a8-834e1b1f6e11.jpg?alt=media&token=4c141a49-b583-4a13-9bf0-f01a095c2a5e',
-        'https://firebasestorage.googleapis.com/v0/b/slider-3a299.appspot.com/o/DDyCMjt8QxMIh0mAZ85gIZpikhR2%2Frn_image_picker_lib_temp_bb8a2fbf-a8fa-4356-a4a8-834e1b1f6e11.jpg?alt=media&token=4c141a49-b583-4a13-9bf0-f01a095c2a5e',
-        'https://firebasestorage.googleapis.com/v0/b/slider-3a299.appspot.com/o/DDyCMjt8QxMIh0mAZ85gIZpikhR2%2Frn_image_picker_lib_temp_bb8a2fbf-a8fa-4356-a4a8-834e1b1f6e11.jpg?alt=media&token=4c141a49-b583-4a13-9bf0-f01a095c2a5e',
-        'https://firebasestorage.googleapis.com/v0/b/slider-3a299.appspot.com/o/DDyCMjt8QxMIh0mAZ85gIZpikhR2%2Frn_image_picker_lib_temp_bb8a2fbf-a8fa-4356-a4a8-834e1b1f6e11.jpg?alt=media&token=4c141a49-b583-4a13-9bf0-f01a095c2a5e',
-        
-    ])
+    const [photos,setPhotos] = useState([])
     useEffect(()=>{
-        // getList(route.params?.id)
+        getList(route.params?.id)
     },[])
 
     const getList = (id) =>{

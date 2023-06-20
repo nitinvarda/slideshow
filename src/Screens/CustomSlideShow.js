@@ -47,11 +47,11 @@ export default function CustomSlideShow(props) {
         //   setLoading(false)
         }).catch(err=>console.log(err));
       }
-      // console.log({images,quotes})
+      // console.log({imagesLength:images.length,quotesLength:quotes.length})
   return (
     <View style={{flex:1,backgroundColor:Colors.backgroundColor}}>
         {/* <Text style={{color:Colors.gray}}>CustomSlideShow</Text> */}
-        {(images.length > 0 && quotes.length > 0) && 
+        {(images.length > 0 && quotes.length > 0 && images.length == quotes.length) && 
       <Carousel images={images} quotes={quotes} custom />
         }
     </View>

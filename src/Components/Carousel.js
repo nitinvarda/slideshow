@@ -59,7 +59,7 @@ export default function Carousel({images,quotes,custom}) {
           setSelectedIndex((previousIndex)=>{
               
             const nextIndex = previousIndex === images.length - 1 ? 0 : previousIndex+1;
-          
+          console.log({length:images.length,nextIndex})
             flatListRef?.current?.scrollToIndex({
             index:nextIndex,
             animated:true
@@ -80,7 +80,7 @@ export default function Carousel({images,quotes,custom}) {
       //   return (
       //     <View style={{position:'absolute',left:0,right:0,bottom:30,flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)'}}>
       //       <Animated.View style={{marginBottom:15,transform:[{translateX:slide1Animation1}]}}>
-      //         <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+      //         <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
       //       </Animated.View>
       //       <Animated.View style={{transform:[{translateX:slide1Animation2}]}}>
 
@@ -95,7 +95,7 @@ export default function Carousel({images,quotes,custom}) {
       //   return (
       //     <View style={{position:'absolute',left:0,right:0,top:30,flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)'}}>
       //       <Animated.View style={{marginBottom:15,transform:[{translateX:slide2Animation1}]}}>
-      //         <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+      //         <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
       //       </Animated.View>
       //       <Animated.View style={{transform:[{translateX:slide2Animation2}]}}>
 
@@ -109,7 +109,7 @@ export default function Carousel({images,quotes,custom}) {
           return (
             <View style={{position:'absolute',left:5,right:5,bottom:30,flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)',borderRadius:10,padding:5}}>
               <Animated.View style={{marginBottom:15,transform:[{translateX:slide0Animation1}]}}>
-                <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+                <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
               </Animated.View>
               <Animated.View style={{transform:[{translateX:slide0Animation2}]}}>
 
@@ -121,7 +121,7 @@ export default function Carousel({images,quotes,custom}) {
           return (
             <View style={{position:'absolute',left:5,right:5,bottom:30,flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)',borderRadius:10,padding:5}}>
               <Animated.View style={{marginBottom:15,transform:[{translateX:slide3Animation1}]}}>
-                <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+                <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
               </Animated.View>
               <Animated.View style={{transform:[{translateX:slide3Animation2}]}}>
 
@@ -133,7 +133,7 @@ export default function Carousel({images,quotes,custom}) {
           return (
             <View style={{position:'absolute',left:5,right:5,bottom:30,flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)',borderRadius:10,padding:5}}>
               <Animated.View style={{marginBottom:15,transform:[{translateX:slide6Animation1}]}}>
-                <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+                <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
               </Animated.View>
               <Animated.View style={{transform:[{translateX:slide6Animation2}]}}>
 
@@ -145,7 +145,7 @@ export default function Carousel({images,quotes,custom}) {
           return (
             <View style={{position:'absolute',left:5,right:5,bottom:30,flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)',borderRadius:10,padding:5}}>
               <Animated.View style={{marginBottom:15,transform:[{translateX:slide9Animation1}]}}>
-                <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+                <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
               </Animated.View>
               <Animated.View style={{transform:[{translateX:slide9Animation2}]}}>
 
@@ -158,7 +158,7 @@ export default function Carousel({images,quotes,custom}) {
           return (
             <View style={{position:'absolute',left:5,right:5,top:30,flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)',borderRadius:10,padding:5}}>
               <Animated.View style={{marginBottom:15,transform:[{translateX:slide1Animation1}]}}>
-                <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+                <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
               </Animated.View>
               <Animated.View style={{transform:[{translateX:slide1Animation2}]}}>
 
@@ -170,7 +170,7 @@ export default function Carousel({images,quotes,custom}) {
           return (
             <View style={{position:'absolute',left:5,right:5,top:30,flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)',borderRadius:10,padding:5}}>
               <Animated.View style={{marginBottom:15,transform:[{translateX:slide4Animation1}]}}>
-                <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+                <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
               </Animated.View>
               <Animated.View style={{transform:[{translateX:slide4Animation2}]}}>
 
@@ -183,7 +183,7 @@ export default function Carousel({images,quotes,custom}) {
           return (
             <View style={{position:'absolute',left:5,right:5,top:30,flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)'}}>
               <Animated.View style={{marginBottom:15,transform:[{translateX:slide7Animation1}]}}>
-                <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+                <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
               </Animated.View>
               <Animated.View style={{transform:[{translateX:slide7Animation2}]}}>
 
@@ -197,7 +197,7 @@ export default function Carousel({images,quotes,custom}) {
              <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)',borderRadius:10,padding:5}}>
 
               <Animated.View style={{marginBottom:15,transform:[{translateX:slide2Animation1}]}}>
-                <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+                <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
               </Animated.View>
               <Animated.View style={{transform:[{translateX:slide2Animation2}]}}>
 
@@ -212,7 +212,7 @@ export default function Carousel({images,quotes,custom}) {
              <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)',borderRadius:10,padding:5}}>
 
               <Animated.View style={{marginBottom:15,transform:[{translateX:slide5Animation1}]}}>
-                <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+                <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
               </Animated.View>
               <Animated.View style={{transform:[{translateX:slide5Animation2}]}}>
 
@@ -227,7 +227,7 @@ export default function Carousel({images,quotes,custom}) {
              <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center',backgroundColor:'rgba(0,0,0,0.7)',borderRadius:10,padding:5}}>
 
               <Animated.View style={{marginBottom:15,transform:[{translateX:slide8Animation1}]}}>
-                <Text style={{color:'white',fontSize:22,}}>{quotes[index]?.content}</Text>
+                <Text style={{color:'white',fontSize:22,}}>{custom ? quotes[index]?.quote :  quotes[index]?.content}</Text>
               </Animated.View>
               <Animated.View style={{transform:[{translateX:slide8Animation2}]}}>
 
@@ -244,7 +244,7 @@ export default function Carousel({images,quotes,custom}) {
     }
 
     const viewableChanged = useCallback(({viewableItems,changed}) =>{
-   
+      console.log(viewableItems)
       switch(changed[0]?.index){
         case 0:
           if(changed[0]?.isViewable){
@@ -406,7 +406,7 @@ export default function Carousel({images,quotes,custom}) {
           return 0;
       }
     },[])
-
+    console.log({quotes})
   return (
     <FlatList 
       ref={flatListRef}
@@ -421,6 +421,10 @@ export default function Carousel({images,quotes,custom}) {
       snapToAlignment='center'
       showsHorizontalScrollIndicator={false}
       onViewableItemsChanged={viewableChanged}
+      viewabilityConfig={{
+        minimumViewTime: 500,
+        viewAreaCoveragePercentThreshold: 60,
+    }}
       renderItem={({item,index})=>{
    
         return (
