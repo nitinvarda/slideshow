@@ -1,6 +1,6 @@
 # slideshow
 
-## This is the preview of the final app
+## This is the preview of the final app.
 
 
 
